@@ -1,0 +1,28 @@
+import pygame
+
+from game.field.common_field import CommonField
+from game.object.field_object.encount_object import EncountGlass, EncountSwamp
+from game.object.field_object.normal_object import Road, StoneRoad
+from game.object.field_object.unenter_object import BigRock, Lake
+
+
+class GlassField2(CommonField):
+    def __init__(self):
+        self.special_object = []
+
+        self.screen = pygame.display.set_mode((0, 0))
+        self.screen.fill((153,255,50))
+        
+        road = StoneRoad()
+        road.draw(self.screen, 360, 0, 180, 810)
+
+
+
+
+        super().__init__(self.screen, self.special_object)
+        
+
+    def set_field(self):
+        self.field.blit(self.original_field, (0, 0))
+
+        pygame.display.update()

@@ -1,0 +1,3 @@
+武器について
+Friendは None / Weapon
+Weapomは None / Weapon.name
